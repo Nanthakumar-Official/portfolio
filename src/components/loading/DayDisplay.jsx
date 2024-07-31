@@ -25,7 +25,7 @@ const DayDisplay = () => {
         return () => clearInterval(timer); // Clean up the interval on component unmount
     }, []);
 
-    return <div>{day}</div>;
+    return <div className='uppercase'>{day}</div>;
 };
 
 export default DayDisplay;

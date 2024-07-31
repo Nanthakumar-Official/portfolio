@@ -12,6 +12,7 @@ module.exports = {
                 roboto: ['"Roboto Condensed', 'sans-serif'],
                 rubik: ['Rubik', 'sans-serif'],
                 barlow: ['Barlow Condensed', 'sans-serif'],
+                exo: ['Exo','sans-serif'],
             },
             boxShadow: {
                 '3xl': '0 35px 60px -15px rgba(0, 0, 0, 0.3)',
@@ -22,10 +23,10 @@ module.exports = {
             // },
             colors: {
                 primary: {
-                    100: '#0C3B2E',
-                    200: '#FFBA00',
-                    300: '#B46617',
-                    400: '#6D9773',
+                    100: '#22331D',
+                    200: '#F65A11',
+                    300: '#6A6D69',
+                    400: '#EFEDE7',
                 },
                 secondary: '#fdf9ec',
                 BackgroundGray: '#F3F3F3',

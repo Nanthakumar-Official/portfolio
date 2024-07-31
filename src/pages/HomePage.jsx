@@ -15,14 +15,16 @@ const HomePage = () => {
 
     return (
         <>
-            {loading ? (
+            {/* {loading ? (
                 <Loader />
             ) : (
                 <>
                     <Header />
                     <HomePageHeroSection />
                 </>
-            )}
+            )} */}
+            <Header />
+            <HomePageHeroSection />
         </>
     );
 };
