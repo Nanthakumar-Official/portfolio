@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Header from '../components/Header';
 import HomePageHeroSection from '../components/HomePageHeroSection';
 import Loader from '../components/loading/Loader';
+import { DragCards } from '../components/DragCards';
 const HomePage = () => {
     const [loading, setLoading] = useState(true);
 
@@ -25,6 +26,7 @@ const HomePage = () => {
             )} */}
             <Header />
             <HomePageHeroSection />
+            <DragCards />
         </>
     );
 };
