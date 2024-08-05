@@ -3,6 +3,8 @@ import Header from '../components/Header';
 import HomePageHeroSection from '../components/HomePageHeroSection';
 import Loader from '../components/loading/Loader';
 import { DragCards } from '../components/DragCards';
+import HeroBanner from '../components/HeroBanner';
+import About from '../components/About';
 const HomePage = () => {
     const [loading, setLoading] = useState(true);
 
@@ -15,7 +17,7 @@ const HomePage = () => {
     }, []);
 
     return (
-        <>
+        <main className='bg-black text-white overflow-x-hidden tracking-tighter antialiased'>
             {/* {loading ? (
                 <Loader />
             ) : (
@@ -24,10 +26,13 @@ const HomePage = () => {
                     <HomePageHeroSection />
                 </>
             )} */}
-            <Header />
+            {/* <Header />
             <HomePageHeroSection />
-            <DragCards />
-        </>
+            <DragCards /> */}
+            <Header />
+            <HeroBanner />
+            <About />
+        </main>
     );
 };
 
