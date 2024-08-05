@@ -5,6 +5,10 @@ import Loader from '../components/loading/Loader';
 import { DragCards } from '../components/DragCards';
 import HeroBanner from '../components/HeroBanner';
 import About from '../components/About';
+import { SocialMediaLinks } from '../components/SocialMediaLinks';
+import { Skils } from '../components/Skils';
+import { ProjectView } from '../components/ProjectView';
+import SubComponents from '../components/SubComponents';
 const HomePage = () => {
     const [loading, setLoading] = useState(true);
 
@@ -32,6 +36,9 @@ const HomePage = () => {
             <Header />
             <HeroBanner />
             <About />
+            <SocialMediaLinks />
+            <SubComponents />
+            <Skils />
         </main>
     );
 };

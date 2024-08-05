@@ -4,10 +4,10 @@ import { twMerge } from 'tailwind-merge';
 
 export const DragCards = () => {
     return (
-        <section className='relative grid min-h-screen w-full place-content-center overflow-hidden bg-neutral-950'>
-            <h2 className='relative z-0 text-[20vw] font-black text-neutral-800 md:text-[200px]'>
-                NANTHA KUMAR
-            </h2>
+        <section className='relative grid min-h-[70vh] w-full place-content-center overflow-hidden bg-black'>
+            {/* <h2 className='relative z-0 text-[20vw] font-black text-neutral-800 md:text-[200px]'>
+                DEVELOPER
+            </h2> */}
             <Cards />
         </section>
     );
@@ -20,63 +20,57 @@ const Cards = () => {
         <div className='absolute inset-0 z-10' ref={containerRef}>
             <Card
                 containerRef={containerRef}
-                src='https://images.unsplash.com/photo-1635373670332-43ea883bb081?q=80&w=2781&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
-                alt='Example image'
+                content='React'
                 rotate='6deg'
                 top='20%'
                 left='25%'
-                className='w-36 md:w-56'
+                className='w-auto border border-white rounded-full text-white cursor-pointer'
             />
             <Card
                 containerRef={containerRef}
-                src='https://images.unsplash.com/photo-1576174464184-fb78fe882bfd?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
-                alt='Example image'
                 rotate='12deg'
+                content='Tailwindcss'
                 top='45%'
                 left='60%'
-                className='w-24 md:w-48'
+                className='w-auto border border-white rounded-full text-white cursor-pointer'
             />
             <Card
                 containerRef={containerRef}
-                src='https://images.unsplash.com/photo-1503751071777-d2918b21bbd9?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
-                alt='Example image'
                 rotate='-6deg'
+                content='HTML5'
                 top='20%'
                 left='40%'
-                className='w-52 md:w-80'
+                className='w-auto border border-white rounded-full text-white cursor-pointer'
             />
             <Card
                 containerRef={containerRef}
-                src='https://images.unsplash.com/photo-1620428268482-cf1851a36764?q=80&w=2609&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
-                alt='Example image'
                 rotate='8deg'
+                content='CSS'
                 top='50%'
                 left='40%'
-                className='w-48 md:w-72'
+                className='w-auto border border-white rounded-full text-white cursor-pointer'
             />
             <Card
                 containerRef={containerRef}
-                src='https://images.unsplash.com/photo-1602212096437-d0af1ce0553e?q=80&w=2671&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
-                alt='Example image'
                 rotate='18deg'
+                content='Typescript'
                 top='20%'
                 left='65%'
-                className='w-40 md:w-64'
+                className='w-auto border border-white rounded-full text-white cursor-pointer'
             />
             <Card
                 containerRef={containerRef}
-                src='https://images.unsplash.com/photo-1622313762347-3c09fe5f2719?q=80&w=2640&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
-                alt='Example image'
                 rotate='-3deg'
+                content='Sass'
                 top='35%'
                 left='55%'
-                className='w-24 md:w-48'
+                className='w-auto border border-white rounded-full text-white cursor-pointer'
             />
         </div>
     );
 };
 
-const Card = ({ containerRef, src, alt, top, left, rotate, className }) => {
+const Card = ({ containerRef, top, content, left, rotate, className }) => {
     const [zIndex, setZIndex] = useState(0);
 
     const updateZIndex = () => {
@@ -96,7 +90,7 @@ const Card = ({ containerRef, src, alt, top, left, rotate, className }) => {
     };
 
     return (
-        <motion.img
+        <motion.div
             onMouseDown={updateZIndex}
             style={{
                 top,
@@ -104,14 +98,15 @@ const Card = ({ containerRef, src, alt, top, left, rotate, className }) => {
                 rotate,
                 zIndex,
             }}
-            className={twMerge('drag-elements absolute w-48 bg-neutral-200 p-1 pb-4', className)}
-            src={src}
-            alt={alt}
+            content
+            className={twMerge('drag-elements absolute w-auto px-5 py-1 text-center text-white rounded-full font-semibold', className)}
             drag
             dragConstraints={containerRef}
             // Uncomment below and remove dragElastic to remove movement after release
             //   dragMomentum={false}
             dragElastic={0.65}
-        />
+        >
+            {content}
+        </motion.div>
     );
 };

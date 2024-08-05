@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
-import { SiAmazon, SiGithub, SiGoogle, SiMeta, SiTwitch } from 'react-icons/si';
+import { SiReact, SiTailwindcss, SiHtml5, SiCss3, SiTypescript, SiSass, SiAppium, SiBootstrap, SiRedux, SiJavascript, SiSelenium, SiSolidity, SiMongodb } from 'react-icons/si';
 import { twMerge } from 'tailwind-merge';
 
 export const DivOrigami = () => {
@@ -8,21 +8,47 @@ export const DivOrigami = () => {
         <section className='flex flex-col items-center justify-center gap-12 md:flex-row'>
             <LogoRolodex
                 items={[
-                    <LogoItem key={1} className='bg-orange-300 text-neutral-900'>
-                        <SiAmazon />
+                    <LogoItem key={1} className='bg-orange-400 text-white'>
+                        <SiReact />
                     </LogoItem>,
-                    <LogoItem key={2} className='bg-green-300 text-neutral-900'>
-                        <SiGoogle />
+                    <LogoItem key={2} className='bg-teal-400 text-white'>
+                        <SiTailwindcss />
                     </LogoItem>,
-                    <LogoItem key={3} className='bg-blue-300 text-neutral-900'>
-                        <SiMeta />
+                    <LogoItem key={3} className='bg-orange-600 text-white'>
+                        <SiHtml5 />
                     </LogoItem>,
-                    <LogoItem key={4} className='bg-white text-black'>
-                        <SiGithub />
+                    <LogoItem key={4} className='bg-blue-600 text-white'>
+                        <SiCss3 />
                     </LogoItem>,
-                    <LogoItem key={5} className='bg-purple-300 text-neutral-900'>
-                        <SiTwitch />
+                    <LogoItem key={5} className='bg-blue-500 text-white'>
+                        <SiTypescript />
                     </LogoItem>,
+                    <LogoItem key={6} className='bg-pink-400 text-white'>
+                        <SiSass />
+                    </LogoItem>,
+                    <LogoItem key={7} className='bg-green-400 text-white'>
+                        <SiAppium />
+                    </LogoItem>,
+                    <LogoItem key={8} className='bg-purple-400 text-white'>
+                        <SiBootstrap />
+                    </LogoItem>,
+                    <LogoItem key={9} className='bg-yellow-400 text-white'>
+                        <SiRedux />
+                    </LogoItem>,
+                    <LogoItem key={10} className='bg-yellow-600 text-white'>
+                        <SiJavascript />
+                    </LogoItem>,
+                    <LogoItem key={11} className='bg-green-600 text-white'>
+                        <SiSelenium />
+                    </LogoItem>,
+                    <LogoItem key={12} className='bg-gray-600 text-white'>
+                        <SiSolidity />
+                    </LogoItem>,
+                    <LogoItem key={13} className='bg-green-500 text-white'>
+                        <SiMongodb />
+                    </LogoItem>,
+
+
                 ]}
             />
         </section>
