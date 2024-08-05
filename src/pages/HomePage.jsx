@@ -1,14 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import Header from '../components/Header';
-import HomePageHeroSection from '../components/HomePageHeroSection';
-import Loader from '../components/loading/Loader';
-import { DragCards } from '../components/DragCards';
 import HeroBanner from '../components/HeroBanner';
 import About from '../components/About';
 import { SocialMediaLinks } from '../components/SocialMediaLinks';
-import { Skils } from '../components/Skils';
-import { ProjectView } from '../components/ProjectView';
-import SubComponents from '../components/SubComponents';
+import { Services } from '../components/Services';
+import Exhibition from '../components/Exhibition';
 const HomePage = () => {
     const [loading, setLoading] = useState(true);
 
@@ -37,8 +33,8 @@ const HomePage = () => {
             <HeroBanner />
             <About />
             <SocialMediaLinks />
-            <SubComponents />
-            <Skils />
+            <Exhibition />
+            <Services />
         </main>
     );
 };

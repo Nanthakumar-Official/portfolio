@@ -1,6 +1,20 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
-import { SiReact, SiTailwindcss, SiHtml5, SiCss3, SiTypescript, SiSass, SiAppium, SiBootstrap, SiRedux, SiJavascript, SiSelenium, SiSolidity, SiMongodb } from 'react-icons/si';
+import {
+    SiReact,
+    SiTailwindcss,
+    SiHtml5,
+    SiCss3,
+    SiTypescript,
+    SiSass,
+    SiAppium,
+    SiBootstrap,
+    SiRedux,
+    SiJavascript,
+    SiSelenium,
+    SiSolidity,
+    SiMongodb,
+} from 'react-icons/si';
 import { twMerge } from 'tailwind-merge';
 
 export const DivOrigami = () => {
@@ -47,8 +61,6 @@ export const DivOrigami = () => {
                     <LogoItem key={13} className='bg-green-500 text-white'>
                         <SiMongodb />
                     </LogoItem>,
-
-
                 ]}
             />
         </section>

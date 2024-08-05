@@ -46,8 +46,17 @@ const Header = () => {
                     ))}
                 </div>
                 <div className='hidden lg:flex lg:flex-1 lg:justify-end'>
-                    <a href='/' className='text-sm font-semibold leading-6 '>
-                        Log in <span aria-hidden='true'>&rarr;</span>
+                    <a
+                        href='/'
+                        className='text-sm bg-black font-semibold ps-4 pe-1 py-2 rounded-full'
+                    >
+                        Lets talk{' '}
+                        <span
+                            aria-hidden='true'
+                            className='bg-primary-200 px-1.5 py-1 rounded-full ml-2'
+                        >
+                            &rarr;
+                        </span>
                     </a>
                 </div>
             </nav>
@@ -97,7 +106,6 @@ const Header = () => {
                     </div>
                 </DialogPanel>
             </Dialog>
-
         </header>
     );
 };
